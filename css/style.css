@@ -248,3 +248,21 @@
 .Faqs-active{
     display: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.small-title {
+    font-size: 18px;
+}
+
+.big-title {
+    font-size: 4.8vw;
+    font-weight: 900;
+}
+
+.card-img-top {
+    height: 100px;
+    }
