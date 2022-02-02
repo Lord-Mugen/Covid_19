@@ -179,7 +179,7 @@
  }
 
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
     .header{
         left: -3.5rem;
         display: flex;
@@ -203,14 +203,15 @@
     }
     .home{
         display: grid;
-        background-size: 45rem;
+        background-size: 100rem;
+        height: 90rem repeat;
 
     }
     .home_h1{
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
     .home_p{
-        font-size: 0.6rem;
+        font-size: 1rem;
 
     }
     .home_contador{
@@ -222,17 +223,27 @@
     .home_p2{
         font-size: 0.5rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
     }
     .home_img{
         height: 130px;
         width: 130px;
         position: relative;
-        top: -3rem;
-        left: 5rem;
+        top: -20rem;
+        left: 6rem;
         
     }
 
+    .phone_h2{
+        font-size: 1.4rem;
+    }
+    .phone_p{
+        font-size: 1rem;
+    }
+    .phoneimage{
+        width: 9rem;
+        height: 18rem;
+    }
     
 }
 
