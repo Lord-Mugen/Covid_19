@@ -109,6 +109,7 @@
 .home_img{
     height:550px;
 }
+
 .home_div2{
     position: relative;
     padding-top: 70px;
@@ -124,20 +125,20 @@
 
 .phone_container{
     display: grid;
-/*     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
- */    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: 1fr 1fr;
 
     grid-gap: 10px;
     height: 80vh;
-/*     width: 90vw;
- */    background: radial-gradient( #0052d4, #4364f7,#20bdff);
+    width: 90vw;
+    background: radial-gradient( #0052d4, #4364f7,#20bdff);
     align-items: center;
 }
 
 
 .phone_div1{
-   /*  grid-column: 1;
-    grid-row: 3/5; */
+    grid-column: 1;
+    grid-row: 3/5;
     background-color: red;
     color: var(--colorhome1);
     position: absolute;
@@ -152,13 +153,263 @@
 }
 
 .phone_div2{
-    /* grid-column: 3; */
-/*     grid-row: 4/5;
- */    background-color: red;
-/*         position: relative;
- */}
+    grid-column: 3; 
+    grid-row: 4/5;
+    background-color: red;
+     position: relative;
+}
  .phoneimage{
      height: 450px;
  }
 
 
+:root{
+    --color-1:#ffff;
+    --font-1: 'fontawesome';
+    --font-2: 'glyphicons';
+    --font-3: 'Lane';
+    --font-4: 'themify';
+}
+
+@font-face {
+    font-family: 'fontawesome';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.svg'),
+    url('../fonts/fontawesome-webfont.ttf'),
+    url('../fonts/fontawesome-webfont.woff'),
+    url('../fonts/fontawesome-webfont.otf');
+}
+@font-face {
+    font-family: 'glyphicons';
+    src: url('../fonts/glyphicons-halflings-regular.ttf');
+    src:url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+		url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+		url('../fonts/glyphicons-halflings-regular.svg') format('svg');
+}
+@font-face {
+    font-family: 'Lane';
+    src: url('../fonts/lanenar_Lane.ttf');
+    src:url('../fonts/lanenar_Lane.woff') format('woff'),
+		url('../fonts/lanenar_Lane.ttf') format('truetype'),
+		url('../fonts/lanenar_Lane.svg') format('svg');
+}
+@font-face {
+	font-family: 'themify';
+	src:url('../fonts/themify.eot');
+	src:url('../fonts/themify.woff') format('woff'),
+		url('../fonts/themify.ttf') format('truetype'),
+		url('../fonts/themify.svg') format('svg');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    /*border:solid;*/
+}
+
+.prevent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+}
+
+.prevent-title{
+    text-align: center;
+    font-family: var(--font-3);
+}
+
+.prevent-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    column-gap: 1em;
+    row-gap: 1em;
+    
+}
+
+
+.prevent-block{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(min(100%,15rem), 1fr));
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.prevent-block p{
+    /*Fuentes*/
+}
+
+.prevent-figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12em;
+}
+
+.prevent-hexagon img{
+    position: absolute;
+    z-index: 1;
+    height: 6em;
+    width: 6em;
+    text-align: center;
+    
+}
+
+.prevent-hexagon{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.4em;
+    width: 9em;
+    background-color: gray;
+    border-radius: 0.4em;
+}
+
+.prevent-hexagon::before{
+    position: absolute;
+    content: "";
+    background: inherit;
+    transform: rotate(-60deg);
+    transform-origin: 50% 50%;
+    border-radius: 0.4em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+
+.prevent-hexagon::after{
+    position: absolute;
+    content: "";
+    background: inherit;
+    transform: rotate(60deg);
+    transform-origin: 50% 50%;
+    border-radius: 0.4em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+}
+
+
+/*Seccion spreads*/
+.spreads{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+}
+
+.spreads-title{
+    text-align: center;
+    font-family: var(--font-3);
+}
+
+.spreads-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,15rem), 1fr));
+    column-gap: 2em;
+    row-gap: 2em;
+}
+
+
+.spreads-block{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+.spreads-block p{
+    /*Fuentes*/
+}
+.spreads-block >div{
+    border-radius: 0 0 1em 1em;
+}
+
+.spreads-figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.spreads-figure img{
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+/* seccion faqs */
+.Faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    background-image: url("../images/slide-1.jpg");
+    padding: 3rem 0;
+}
+.Faqs::after{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    background-image:  linear-gradient(to right, rgb(30, 12, 157), rgb(6,205,236)), url("../images/slide-1.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .95;
+}
+
+.Faqs-title{
+    text-align: center;
+    font-family: var(--font-3);
+    z-index: 1;
+    color: white;
+}
+
+.Faqs-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    column-gap: 2em;
+    row-gap: 2em;
+}
+
+.Faqs-container{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    row-gap: 1rem;
+}
+
+.Faqs-block{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(min(100%,30rem), 1fr));
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 12, 157, 0.5);
+    border: 1px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 1rem;
+    color: white;
+    height: auto;
+    column-gap: 3rem;
+    z-index: 1;
+}
+
+.Faqs-block h5{
+    /*Fuentes*/
+    font-weight: bold;
+    
+}
+
+.Faqs-block a{
+    color: white;
+    text-decoration: none;
+}
+
+.Faqs-active{
+    display: none;
+}
