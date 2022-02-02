@@ -1,7 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
 :root {
-    --colorhome1: #fff;
-    --backgroundhome1: #fff;
+
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #3639AE;
+    --secondary: #673BB7;
+    --success: #10d876;
+    --info: #2754e6;
+    --warning: #FE9431;
+    --danger: #E50202;
+    --light: #F8F9FE;
+    --dark: #262F5A;
 }
+/*Configuraciones generales */
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    /* border:solid; */
+}
+
+/* p titulos menores*/
+.small-title {
+    font-size: 1.2rem;
+    font-weight:600;
+}
+
+/* h1 titulo grande*/
+.big-title {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.card-img-top {
+    height: 100px;
+}
+/*Fin configuraciones generales*/
+
 
 /* logo and nav styles */
 .homelogo{
@@ -14,7 +61,7 @@
 }
 
 .header{
-    color: var(--colorhome1);
+    color: var(--white);
     padding-top: 5px;
     padding-bottom: 10px;
     position: fixed;
@@ -41,7 +88,7 @@
 }
 .navbar ul li a{
     text-decoration:none;
-    color: var(--colorhome1);
+    color: var(--white);
     display: flex;
     align-items: flex-end;
 }
@@ -60,10 +107,10 @@
 }
 
 .tracker a{
-    color: var(--colorhome1);
+    color: var(--white);
     text-decoration: none;
 }
-
+/* FIN logo and nav styles */
 
 /* home section styles */
 .home{
@@ -84,15 +131,15 @@
 
 .home_h1{
     font-size:60px;
-    color: var(--colorhome1);
+    color: var(--white);
 }
 
 .home_p{
-    color: var(--colorhome1);
+    color: var(--white);
 }
 
 .home_contador{
-    background-color: #fff;
+    background-color: var(--white);
     width: 350px;
     height: 70px;
     border-radius: 0.5rem;
@@ -117,6 +164,7 @@
     padding-right: 150px;
     
 }
+/* FIN home section styles */
 
 /* phone section styles */
 .Cellphone{
@@ -145,11 +193,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--colorhome1);
+    color: var(--white);
     padding-left: 5rem;
-    /*grid-column: 1;
-    grid-row: 3/5;*/
-    /*position: absolute;*/
 }
 
 .phone_h2{
@@ -159,17 +204,12 @@
     font-size: 1.2rem;
 }
 
-/* .phone_div2{
-    grid-column: 3; 
-    grid-row: 4/5;
-   
-} */
 
 .phone_figura{
     position: relative;
 }
 
- .phoneimage{
+.phoneimage{
     position: absolute;
     top:-3rem;
     left:50%;
@@ -247,62 +287,22 @@
     
 }
 
+ /*FIN phone section styles */
 
-:root{
-    --color-1:#ffff;
-    --font-1: 'fontawesome';
-    --font-2: 'glyphicons';
-    --font-3: 'Lane';
-    --font-4: 'themify';
-}
 
-@font-face {
-    font-family: 'fontawesome';
-    src: url('../fonts/fontawesome-webfont.eot');
-    src: url('../fonts/fontawesome-webfont.svg'),
-    url('../fonts/fontawesome-webfont.ttf'),
-    url('../fonts/fontawesome-webfont.woff'),
-    url('../fonts/fontawesome-webfont.otf');
-}
-@font-face {
-    font-family: 'glyphicons';
-    src: url('../fonts/glyphicons-halflings-regular.ttf');
-    src:url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
-		url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-		url('../fonts/glyphicons-halflings-regular.svg') format('svg');
-}
-@font-face {
-    font-family: 'Lane';
-    src: url('../fonts/lanenar_Lane.ttf');
-    src:url('../fonts/lanenar_Lane.woff') format('woff'),
-		url('../fonts/lanenar_Lane.ttf') format('truetype'),
-		url('../fonts/lanenar_Lane.svg') format('svg');
-}
-@font-face {
-	font-family: 'themify';
-	src:url('../fonts/themify.eot');
-	src:url('../fonts/themify.woff') format('woff'),
-		url('../fonts/themify.ttf') format('truetype'),
-		url('../fonts/themify.svg') format('svg');
-}
 
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    /* border:solid; */
-}
+/*Seccion prevent*/
 
 .prevent{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*height: 100vh;*/
 }
 
 .prevent-title{
     text-align: center;
-    font-family: var(--font-3);
+  
 }
 
 .prevent-grid{
@@ -378,7 +378,7 @@
     bottom: 0;
     left:0;
 }
-
+/*FIN Seccion prevent*/
 
 /*Seccion spreads*/
 .spreads{
@@ -386,7 +386,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*height: 100vh;*/
 }
 
 .spreads-title{
@@ -396,7 +395,7 @@
 
 .spreads-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%,15rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
     column-gap: 2em;
     row-gap: 2em;
 }
@@ -428,6 +427,7 @@
     width: 100%;
     border-radius: 1em 1em 0 0;
 }
+/*Seccion spreads*/
 
 /* seccion faqs */
 .Faqs{
@@ -454,7 +454,7 @@
     text-align: center;
     font-family: var(--font-3);
     z-index: 1;
-    color: white;
+    color: var(--white);
 }
 
 .Faqs-grid{
@@ -478,7 +478,7 @@
     background: rgba(30, 12, 157, 0.5);
     border: 1px rgba(255, 255, 255, 0.2) solid;
     border-radius: 1rem;
-    color: white;
+    color: var(--white);
     height: auto;
     column-gap: 3rem;
     z-index: 1;
@@ -491,28 +491,74 @@
 }
 
 .Faqs-block a{
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
 .Faqs-active{
     display: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
-* {
-    font-family: 'Poppins', sans-serif;
-}
+/* FIN seccion faqs */
 
-.small-title {
-    font-size: 18px;
-}
 
-.big-title {
-    font-size: 4.8vw;
-    font-weight: 900;
-}
+/* Media query del nabvar*/
 
-.card-img-top {
-    height: 100px;
+@media (max-width: 640px) {
+    .header{
+        left: -3.5rem;
+        display: flex;
+        justify-content:center;
+        margin-left: 10rem;
     }
+    .iconolog{
+        height:1rem;
+    }
+    .logonav{
+        display: flex;
+    }
+    .homelogo{
+        font-size: 0.8rem;
+        margin-right: -2rem;
+    }
+    .navbar ul{
+        font-size: 0.6rem;
+        padding: 0px 0px 0px;
+        margin-left: 2rem;
+    }
+    .home{
+        display: grid;
+        background-size: 45rem;
+
+    }
+    .home_h1{
+        font-size: 1.6rem;
+    }
+    .home_p{
+        font-size: 0.6rem;
+
+    }
+    .home_contador{
+        width: 140px;
+        height: 30px;
+        border-radius:0.2rem;
+        line-height: 1.5rem;
+    }
+    .home_p2{
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .home_img{
+        height: 130px;
+        width: 130px;
+        position: relative;
+        top: -3rem;
+        left: 5rem;
+        
+    }
+
+    
+}
+/*Fin del media query del nabvar y home*/
+
