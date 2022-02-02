@@ -162,24 +162,3 @@
  }
 
 
-/*trying to make it responsive */
-
-/* .header{
-    grid-area: top;
-}
-
-.home_div1{
-    grid-area: left;
-}
-
-.home_div2{
-    grid-area: right;
-}
-
-@media (min-width: 640px) {
-    .header{
-        grid-template-areas: 
-        top top top
-        left left right;
-    }
-} */
