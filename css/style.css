@@ -1,0 +1,185 @@
+:root {
+    --colorhome1: #fff;
+    --backgroundhome1: #fff;
+}
+
+/* logo and nav styles */
+.homelogo{
+    padding-left: 90px;
+    font-size: 23px;
+}
+.logonav{
+    display: flex;
+    align-items: center
+}
+
+.header{
+    color: var(--colorhome1);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+     box-shadow: 5px 5px 10px -3px#00000010;
+    z-index: 1;
+    display: flex;
+    align-items:center;
+}
+
+.navbar ul{
+    text-decoration: none;
+    padding-right: 75px;
+    padding-left: 75px;
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    align-items:center;
+}
+
+.navbar ul li{
+    margin-left: 35px;  
+    margin-right: 20px;
+}
+.navbar ul li a{
+    text-decoration:none;
+    color: var(--colorhome1);
+    display: flex;
+    align-items: flex-end;
+}
+
+.tracker{
+    background-color: #0063b1;
+    display: block;
+    height: 40px;
+    width: 130px;
+    border-radius: 20px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border: solid transparent;
+    align-items: center;
+}
+
+.tracker a{
+    color: var(--colorhome1);
+    text-decoration: none;
+}
+
+
+/* home section styles */
+.home{
+    background-image: url("../images/gb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex; 
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.home_div1{
+    margin-left: 90px;
+    margin-top: 90px;
+}
+
+.home_h1{
+    font-size:60px;
+    color: var(--colorhome1);
+}
+
+.home_p{
+    color: var(--colorhome1);
+}
+
+.home_contador{
+    background-color: #fff;
+    width: 350px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.home_p2{
+    color:red;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.home_img{
+    height:550px;
+}
+.home_div2{
+    position: relative;
+    padding-top: 70px;
+    padding-right: 150px;
+    
+}
+
+/* phone section styles */
+.Cellphone{
+    display: grid;
+}
+
+
+.phone_container{
+    display: grid;
+/*     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+ */    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 10px;
+    height: 80vh;
+/*     width: 90vw;
+ */    background: radial-gradient( #0052d4, #4364f7,#20bdff);
+    align-items: center;
+}
+
+
+.phone_div1{
+   /*  grid-column: 1;
+    grid-row: 3/5; */
+    background-color: red;
+    color: var(--colorhome1);
+    position: absolute;
+}
+
+.phone_h2{
+    font-size: 45px;
+    padding-left: 90px;
+}
+.phone_p{
+    padding-left: 90px;
+}
+
+.phone_div2{
+    /* grid-column: 3; */
+/*     grid-row: 4/5;
+ */    background-color: red;
+/*         position: relative;
+ */}
+ .phoneimage{
+     height: 450px;
+ }
+
+
+/*trying to make it responsive */
+
+/* .header{
+    grid-area: top;
+}
+
+.home_div1{
+    grid-area: left;
+}
+
+.home_div2{
+    grid-area: right;
+}
+
+@media (min-width: 640px) {
+    .header{
+        grid-template-areas: 
+        top top top
+        left left right;
+    }
+} */
