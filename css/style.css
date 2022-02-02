@@ -159,11 +159,11 @@
     font-size: 1.2rem;
 }
 
-.phone_div2{
-    /* grid-column: 3; 
-    grid-row: 4/5;*/
+/* .phone_div2{
+    grid-column: 3; 
+    grid-row: 4/5;
    
-}
+} */
 
 .phone_figura{
     position: relative;
@@ -203,7 +203,8 @@
     }
     .home{
         display: grid;
-        background-size: 50rem;
+        background-size: 45rem;
+
     }
     .home_h1{
         font-size: 1.6rem;
@@ -224,11 +225,12 @@
         justify-content: flex-end;
     }
     .home_img{
-        height: 150px;
-        width: 150px;
+        height: 130px;
+        width: 130px;
         position: relative;
         top: -3rem;
         left: 5rem;
+        
     }
 
     
