@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    /* border:solid;*/
+}
+
+.Header{
+    padding-top: 1.5rem;
+    width: 7rem;
+}
+
+
+
+.Header-nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.Header-nav ul img{
+    
+    width: 65%;
+    
+    animation: rotation 5s infinite linear;
+}
+
+.Header li{
+    text-align: center;
+    list-style: none;
+}
+
+.Header-nav a{
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+/* Animaciones*/
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(359deg);
+    }
+}
+/* Fin animaciones*/
