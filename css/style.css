@@ -52,12 +52,17 @@
 
 /* logo and nav styles */
 .homelogo{
+    display: flex;
     padding-left: 90px;
-    font-size: 23px;
+    font-size: 24px;
 }
 .logonav{
     display: flex;
     align-items: center
+}
+.iconolog{
+    height:2rem;
+    margin-right: 0.8rem;
 }
 
 .header{
@@ -80,6 +85,7 @@
     font-size: 16px;
     display: flex;
     align-items:center;
+    margin-left: 10rem;
 }
 
 .navbar ul li{
@@ -140,9 +146,27 @@
 
 .home_contador{
     background-color: var(--white);
-    width: 350px;
-    height: 70px;
+    width: 400px;
+    height: 90px;
     border-radius: 0.5rem;
+}
+.colombia{
+    width: 4.5rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    margin-top: -1.9rem;
+}
+.contador1{
+    color: var(--white);
+    background-color: var(--orange);
+    padding: 4px 10px 4px 10px;
+    font-size: 0.9rem;
+}
+.contador2{
+    color: var(--white);
+    background-color: var(--green);
+    padding: 4px 10px 4px 10px;
+    font-size: 0.9rem;
 }
 
 .home_p2{
@@ -358,18 +382,21 @@
     }
     .home_div1{
         margin-left: 2rem;
-        margin-top: 7rem;
+        margin-top: 1rem;
+        width: 100rem;
     }
     .home_h1{
         font-size: 2.4rem;
         line-height: 50px;
+        margin-top: -7rem;
+        width: 100%;
     }
     .home_p{
         font-size: 1rem;
         margin-top: 1.5rem;
         margin-bottom: 3rem;
         width: 21rem;
-        line-height: 30px;
+        line-height: 20px;
     }
     .home_contador{
         width: 300px;
@@ -598,7 +625,7 @@
      }
 }
             
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
 
 
     .header{
@@ -735,7 +762,7 @@
         width: 15.5rem;
         height: 30rem;
      }
-}
+} */
             
  /*FIN phone section styles */
 
