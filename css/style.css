@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 :root {
 
@@ -35,17 +35,32 @@
 /* p titulos menores*/
 .small-title {
     font-size: 1.2rem;
+    color: #121158;
     font-weight:600;
 }
 
 /* h1 titulo grande*/
 .big-title {
     font-size: 3rem;
-    font-weight: 900;
+    color: #293f73;
+    font-weight: 600;
+}
+
+.content-title {
+    font-size: 1.5rem;
+    color: #121158;
+    font-weight: 600;
+}
+
+.content-base {
+    font-size: 1rem;
+    color: #121158;
+    font-weight: 300;
 }
 
 .card-img-top {
     height: 100px;
+    
 }
 /*Fin configuraciones generales*/
 
@@ -193,7 +208,13 @@
 }
 /* FIN home section styles */
 
+/* symptom section styles */
+.symptom {
+    background: aliceblue;
+    padding: 1%;
+}
 
+/* FIN sympton section styles */
 
 /* phone section styles */
 .Cellphone{
@@ -210,7 +231,7 @@
     grid-template-columns:repeat(auto-fill, minmax(min(100%,30rem), 1fr));
     /*grid-template-columns: 1fr 1fr;*/
     height: 90%;
-    background: radial-gradient( darkblue,#20bdff);
+    background: linear-gradient(to right, darkblue,#20bdff);
     grid-gap: 1rem;
     width: 90vw;
     border-radius: 1rem;
@@ -244,6 +265,7 @@
 
 .phone_h2{
     font-size: 3rem;
+    color: white;
 }
 .phone_p{
     font-size: 1.2rem;
@@ -677,6 +699,7 @@
 /*Seccion prevent*/
 
 .prevent{
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -765,6 +788,7 @@
 
 /*Seccion spreads*/
 .spreads{
+    padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -884,6 +908,102 @@
 
 /* FIN seccion faqs */
 
+/* section news styles*/
+
+.info-news {
+    
+    list-style: none;
+}
+
+.info-news ul{
+    padding-left: 0;
+}
+
+.info-news li{
+    float: left;    
+}
+
+.info-news a{
+    display: block;
+    padding: 20px;
+    color: gray;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* FIN section news styles*/
+
+/* section footer styles*/
+
+.footer{
+    background: #1b2a4e;
+}
+.up-footer{
+    background: #1b2a4e;
+    padding: 3%;
+}
+
+.up-footer p{
+    font-size: 14px;
+    line-height: 30px;
+    color: #8686b5;
+}
+.up-footer ul{
+    padding-left: 0;
+    
+}
+.social-icon li{
+    margin-right: .5rem;    
+    background-color: #293f73;
+    color: white;
+    list-style: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;    
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+}
+.list-footer li{
+    list-style: none;
+    line-height: 40px;
+}
+
+.list-footer h4 {
+    color: white
+}
+
+.list-footer a {
+    font-size: 14px;
+    color: #8686b5;
+    text-decoration: none;
+    
+}
+
+.down-footer{
+    border-top: 1px solid #223461;
+    background: #1b2a4e;
+    
+}
+
+.down-footer p{
+    font-size: 14px;
+    line-height: 30px;
+    color: #8686b5;
+}
+
+.desing {
+    float: right;
+}
+
+.desing a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* FIN section footer styles*/
 
 /* Media query del nabvar*/
 
