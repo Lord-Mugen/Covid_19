@@ -37,6 +37,10 @@
     /*border:solid;*/
 }
 
+.activeMenu{
+    display: none !important;
+}
+
 /* p parrafo menores*/
 .small-text {
     font-size: 0.7rem;
