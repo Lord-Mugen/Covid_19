@@ -148,7 +148,7 @@
     background-color: var(--white);
     width: 400px;
     height: 90px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 .colombia{
     width: 4.5rem;
@@ -518,7 +518,7 @@
 
 } 
 
-/* @media (max-width: 992px) {
+ @media (max-width: 1024px) {
 
     .header{
         left: -3.5rem;
@@ -531,11 +531,14 @@
     }
     .logonav{
         display: flex;
+        align-items: center;
+        position: relative;
     }
     .homelogo{
-        display: flex;
+        display: grid;
         font-size: 1.2rem;
         margin-right: 35rem;
+        margin-top: 2rem;
     }
     .navbar ul{
         font-size: 0.99rem;
@@ -548,11 +551,12 @@
         height: repeat;
         width: auto;
         background-size: 150rem;
-        height: 50rem;
+        height: 45rem;
+        margin-bottom: 5rem;
     }
     .home_div1{
-        margin-left: 2rem;
-        margin-top: 10rem;
+        margin-left: 3rem;
+        margin-top: 6rem;
     }
     .home_h1{
         font-size: 2.4rem;
@@ -562,7 +566,7 @@
         font-size: 1rem;
         margin-top: 1.5rem;
         margin-bottom: 3rem;
-        width: 30rem;
+        width: 34rem;
         line-height: 30px;
     }
     .home_contador{
@@ -573,9 +577,17 @@
         top: -1rem;
         position: relative;
     }
+    .colombia{
+        margin-top: -0.7rem;
+        height: 3.7rem;
+        width: 5rem;
+    }
+    .contador1{
+        margin-left: 4rem;
+    }
     .home_p2{
-        font-size: 1rem;
-        display: flex;
+        font-size: 2rem;
+        display: grid;
         justify-content: flex-end;
         align-items: center;
     }
@@ -583,7 +595,7 @@
         height: 420px;
         width: 360px;
         position: relative;
-        top: -28rem;
+        top: -30rem;
         left: 35rem;
         
     }
@@ -599,7 +611,7 @@
     .phone_container{
         display: grid;
         grid-template-columns:repeat(auto-fill, minmax(min(100%,20rem), 1fr));
-        height: 90%;
+        height: 80%;
         background: radial-gradient( darkblue,#20bdff);
         grid-gap: 1rem;
         width: 95vw;
@@ -610,7 +622,7 @@
     .buttonphone{
         display: grid;
         height: 4rem;
-        width: 18rem;
+        width: 15rem;
         text-align: center;
         vertical-align: middle;
         cursor: pointer;
@@ -632,12 +644,12 @@
     }
     
     .phone_h2{
-        font-size: 2rem;
-        width: 22rem;
+        font-size: 2.7rem;
+        width: 28rem;
     }
     .phone_p{
         font-size: 1rem;
-        width: 19rem;
+        width: 27rem;
     }
     
     
@@ -651,9 +663,9 @@
         left:50%;
         transform: translate(-50%, 0); 
         width: 15.5rem;
-        height: 30rem;
+        height: 32rem;
      }
-} */
+} 
             
  /*FIN phone section styles */
 
