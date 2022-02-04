@@ -1,14 +1,128 @@
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #E50202;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #3639AE;
+    --secondary: #673BB7;
+    --success: #82c519;
+    --info: #2c6dff;;
+    --warning: #ff6a07;
+    --danger: #ff0000;
+    --light: #F8F9FE;
+    --dark: #262F5A;
+    --transparent: rgba(0, 0, 0, 0.1);
+    --blue-dark:#1a1662;
+    --red-light:#fff2f2;
+    --green-light:#edffec;
+    --gray-light:#999;
+    --danger-dark:#b70202;
+    
+}
+
 *{
     box-sizing: border-box;
-    /* border:solid;*/
+    font-family: 'Poppins';
+    margin: 0px;
+    /*border:solid;*/
 }
 
+.activeMenu{
+    display: none !important;
+}
+
+/* p parrafo menores*/
+.small-text {
+    font-size: 0.7rem;
+    font-weight:600;
+    background-color: var(--white);
+    padding: 0.5rem;
+    color: var(--gray-light);
+}
+
+.small-span{
+    font-size: 0.9rem;
+    font-weight:500;
+}
+
+.small-title{
+    color:  var(--blue-dark);
+    font-weight:600;
+    width: 8.5rem;
+}
+
+.medium-number{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.medium-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* h1 titulo grande*/
+.big-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/*Colores declases generales */
+.c-danger{
+    color:var(--danger);
+}
+
+.c-danger-dark{
+    color: var(--danger-dark);
+}
+
+.c-warning{
+    color: var(--warning);
+}
+
+.c-success{
+    color:var(--success);
+}
+.c-primary{
+    color: var(--primary);
+}
+.c-primary-dark{
+    color: var(--blue-dark);
+}
+
+.c-info{
+    color: var(--info);
+}
+
+
+.Main{
+    display: flex;
+    width: 100% !important;
+    height: 100vh;
+}
+
+/* Barra de navegacion */
 .Header{
-    padding-top: 1.5rem;
-    width: 7rem;
+    padding-top: 1rem;
+    width: 6.5em;
+    height: 100vh;
+    overflow-y:auto;
+    border-right: 1px solid var(--transparent);
 }
-
-
+/* Ocultar barra de scroll*/
+.Header::-webkit-scrollbar {
+    display: none;
+}
 
 .Header-nav ul{
     display: flex;
@@ -19,10 +133,12 @@
 }
 
 .Header-nav ul img{
-    
-    width: 65%;
-    
+    width: 70%;
     animation: rotation 5s infinite linear;
+}
+
+.Header-nav-logo{
+    padding-bottom: 1rem;
 }
 
 .Header li{
@@ -32,7 +148,24 @@
 
 .Header-nav a{
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+    padding: 8px 15px;
+}
+
+.Header-nav a:hover{
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius:5px;
+}
+
+.Header-nav-active{
+    background-color: var(--primary);
+    border-radius:5px;
+}
+
+.Header-nav-active i{
+    color: var(--white);
 }
 
 /* Animaciones*/
@@ -45,3 +178,447 @@
     }
 }
 /* Fin animaciones*/
+
+/* FIN Barra de navegacion */
+
+/*Breack point del menu top10 1200px*/
+
+/*menu top10*/
+.top10{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    gap: 1rem;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--transparent);
+}
+/*ocultar barra scroll*/
+.top10::-webkit-scrollbar {
+    display: none;
+}
+
+.top10-list1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top10-list1 ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0px;
+    list-style: none;
+    width: 90%;
+}
+
+.top10-list1 li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    padding: 1.5rem 1rem;
+    line-height: 0.8;
+    width: 17rem;
+    border-radius: 4px;
+}
+
+.top10-list1 p{
+    margin: 0;
+    
+}
+
+.top10-title{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    text-align: start;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+
+.top10list1-danger{
+    background-color: var(--red-light);
+    transition: all 0.3s;
+ 
+}
+
+
+.top10list1-success{
+    background-color: var(--green-light);
+    transition: all 0.3s;
+    
+}
+
+.top10list1-success:hover{
+    position: relative ;
+    width: 17.3rem;
+    height: 105%;
+    transform: translate(-0%,-1%);
+   /* transform: translate(-2%,0);*/
+    transition: all 0.3s;
+}
+
+.top10list1-danger:hover {
+    position: relative ;
+    width: 17.3rem;
+    height: 105%;
+    transform: translate(-0%,-1%);
+   /* transform: translate(-2%,0);*/
+    transition: all 0.3s;
+}
+
+.top10-cardslist1:hover{
+    outline: 2px solid var(--danger);
+    transition: all 0.1s;
+}
+.top10-cardslist2:hover{
+    outline: 2px solid var(--warning);
+    transition: all 0.1s;
+}
+.top10-cardslist3:hover{
+    outline: 2px solid var(--success);
+    transition: all 0.1s;
+}
+.top10-cardslist4:hover{
+    outline: 2px solid var(--primary);
+    transition: all 0.1s;
+}
+
+/*Countries top*/
+.top10-countries-container{
+    display: flex;
+}
+
+.top10-countries-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+.top10-countries-container li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    
+    list-style: none;
+    width: 17rem;
+    padding: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.089);
+    border: 1px rgb(235, 235, 235) solid;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+.top10-countries-container li:hover{
+    width: 102%;
+    height: 102%;
+    transform: translate(-1%,-1%);
+    transition: all 0.15s;
+    height: 105%;
+}
+
+.top10-countries-container li div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+.top10-countries-container img{
+    list-style: none;
+    width: 2.9rem;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.top10-countries-container h5{
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+/*FIN menu top10*/
+
+
+/* Bloque responsive para el tracker 2*/
+.block-container{
+    width: 100%;
+    display: grid;
+}
+
+.Tracker2{
+    /*height: 100vh;*/
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows:0.8fr 4fr 1fr;
+    
+}
+
+.Tracker2-container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%,25rem), 1fr));
+}
+
+@media only screen and (max-width: 1200px) {
+    .top10{
+        display: none;
+    }
+   
+}
+
+@media only screen and (max-width: 500px) {
+    .Header{
+       /* width: 17%;*/
+    }/*
+    .block-container{
+        font-size: 90% !important;
+    }*/
+    
+    .Tracker2{
+        display: flex;
+        flex-direction: column;
+    }
+    .Tracker2-block2-s2 >div{
+        width: 50%;
+        flex: 1 !important;
+    }
+    .Tracker2-block2-s2 div h3{
+        font-size: 0.8rem !important;
+    }
+    .Tracker2-block2-s2 div h6{
+        font-size: 0.8rem !important;
+    }
+
+    
+
+    .Tracker2-block3 >div{
+        
+        width: 50%;
+    }
+    .Tracker2-block3 h3{
+        font-size: 0.8rem !important;
+    }
+    .Tracker2-block3 p{
+        font-size:  0.8rem !important;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    .Tracker2-block3{
+        display: flex !important;
+        flex-direction: column;
+    }
+    .Tracker2-block3 >div{
+       
+        width: 100% !important;
+    }
+}
+
+/* Fin bloque renponsive par el tracker 2*/
+
+
+/*bloque tracker2 seccion 1*/
+.Tracker2-block1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--transparent);
+
+}
+
+#current_date{
+    font-weight: 500;
+    margin: 0;
+}
+
+.Tracker2-block1 select{
+    border-radius: 0px;
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    border-style: none;
+    box-shadow: 2px 10px 20px 5px rgba(20, 50, 90, 0.082);
+}
+
+
+
+/*FIN bloque tracker2 seccion 1*/
+
+
+/*bloque tracker2 seccion 2 tarjetas*/
+.Tracker2-block2-s2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+    row-gap: 1rem;
+}
+
+.Tracker2-block2-s2 >div{
+    padding: 0px 0.5rem ;
+    width: 13rem;
+    
+    
+} 
+
+.Tracker2-info h6{
+    padding: 0.4rem 0.4rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--transparent);
+}
+.Tracker2-info h3{
+    padding: 0.4rem 0.4rem;
+    margin:0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+}
+
+/* Bloque fallido para colocar imagen de fondo a tarjeta
+.T-imgcard{
+    box-shadow: 2px 10px 20px 5px rgba(20, 50, 90, 0.082);
+    position: relative;
+    overflow: hidden;
+}
+
+.T-imgcard::before{
+    position: absolute;
+    content: "";
+    top:50%;
+    left: 130%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    z-index: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.13;
+    
+}
+
+.T-imgcard::before:hover{
+    
+}
+
+.Tracker2-imgcard-1::before{
+    background-image: url("../images/icons/covid-defult.svg");
+}
+.Tracker2-imgcard-2::before{
+    background-image: url("../images/icons/covid-red.svg");
+}
+.Tracker2-imgcard-3::before{
+    background-image: url("../images/icons/covid-green.svg");
+}
+.Tracker2-imgcard-4::before{
+    background-image: url("../images/icons/covid-blue.svg");
+}
+.Tracker2-imgcard-5::before{
+    background-image: url("../images/icons/covid-orange.svg");
+}
+.Tracker2-imgcard-6::before{
+    background-image: url("../images/icons/covid-redark.svg");
+}
+*/
+.T-imgcard{
+    box-shadow: 2px 10px 20px 5px rgba(20, 50, 90, 0.082);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.T-imgcard:hover{
+    transform: translate(0,-10%);
+    transition: all 0.5s;
+}
+
+.T-imgcard img{
+    position: absolute;
+    top:-40%;
+    left: 10%;
+    width: 150%;
+    height: 150%;
+    z-index: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.13;
+    z-index: 1;
+    
+}
+
+.T-imgcard:hover  img{
+    animation: rotation 5s infinite linear;
+}
+
+
+/*FIN bloque tracker2 seccion 2 tarjetas*/
+
+/* Bloque 3 carlos tracker2 seccion3*/
+.Tracker2-block2-s3{
+    text-align: center;
+}
+.Tracker2-block2-s3 img{
+    width: 50%;
+    animation: rotation 1s infinite linear;
+}
+/* Fin  Bloque 3 carlos tracker2 seccion3*/
+
+
+/* BLoque tracker2 seccion4 ultima*/
+
+.Tracker2-block3{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    
+}
+
+.Tracker2-block3 >div{
+ flex: 1;
+}
+.Tracker2-block3-1{
+    display: flex;
+    gap: 1rem;
+    border-right: 1px solid var(--transparent);
+    align-items: center;
+    
+}
+
+.Tracker2-block3-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 5px;
+}
+
+.Tracker2-block3-text h3{
+    margin: 0px;
+    
+}
+.Tracker2-block3-text p{
+    margin: 0px;
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+}
+
+.Tracker2-block3-1 img{
+    width: 2.6rem;
+    margin-left: 1rem;
+}
+
+.Tracker2-block3-1:hover img{
+    animation: rotation 5s infinite linear;
+}
+
+/* FIN BLoque tracker2 seccion4 ultima*/
