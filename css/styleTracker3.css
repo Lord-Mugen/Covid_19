@@ -1,0 +1,128 @@
+:root {
+    --gray-light: #999;
+    --background: #F7F8FC;
+    --white: white;
+    --blue-dark:#1a1662;
+}
+
+* {
+    /* outline: solid;*/
+}
+
+.Main {
+    background-color: var(--background);
+}
+
+.block-container2 {
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.Tracker3 {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%;*/
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.Tracker3-title h3 {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.Tracker3-title {
+    background-color: var(--white);
+}
+
+.Tracker3-table {
+    display: flex;
+}
+
+.Tracker3-table table {
+    display: block;
+    width: 1rem;
+    flex: 1;
+    margin: 0;
+}
+
+.Tracker3-table img {
+    width: 100%;
+}
+
+.Tracker3-table th {
+    width: 20rem;
+}
+
+
+.Tracker3-table th a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap:5px;
+    text-decoration: none;
+    color: var(--blue-dark);
+}
+
+@media only screen and (max-width: 550px) {
+    .Tracker3-filter {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .block-container2 {
+        /* width: 70%;*/
+    }
+    .Tracker3>div {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* contendor filtro y busqueda*/
+
+.Tracker3-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Tracker3-filter>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Tracker3-filter div p {
+    margin: 0;
+}
+
+.Tracker3-filter input {
+    border: 1px solid var(--gray-light);
+    height: 2.5rem;
+    padding: 10px 15px;
+    width: 9rem;
+    ;
+}
+
+.Tracker3-filter select {
+    border: 1px solid var(--gray-light);
+    height: 2.5rem;
+    padding: 5px 15px;
+}
+
+
+/*FIn filtro y busqueda*/
+
+.Tracker3-pagination ul {
+    display: flex;
+    flex-wrap: wrap;
+}

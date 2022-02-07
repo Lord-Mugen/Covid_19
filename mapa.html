@@ -1,0 +1,54 @@
+<! DOCTYPE html>
+<charset meta = "UTF-8">
+<!-- Definición del estilo -->
+<style>
+path {
+  stroke: white;
+  stroke-width: 0.25px;
+  fill: grey;
+}
+</style>
+<body>
+<script type="text/javascript" src="http://d3js.org/d3.v7.min.js"></script>
+<script src="http://d3js.org/topojson.v0.min.js"></script>
+<!-- Creación del mapa -->
+<script>
+	// tamaño del mapa
+	var width = 1000,
+		height = 600;
+ 
+	// Ajustes de proyección para mercator    
+	var projection = d3.geo.mercator()
+      // centro del mapa en grados
+      .center([0, 50])
+      // zoomlevel
+      .scale(100)
+      // map-rotation
+      .rotate([0,0]);
+	  
+	// Definimos "svg" como tipo de datos
+	var svg = d3.select("body").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+ 
+	// definimos el "path" como as return of geographic features
+	var path = d3.geo.path()
+		.projection(projection);
+	  
+	//agrupa las capas svg
+	var g = svg.append ("g");
+	  
+	// Carga de datos y visualización del mapa en el canvas
+  
+	d3.json("world-110m.json", function(error, topology) {
+		g.selectAll("path")
+			.data(topojson.object(topology, topology.objects.countries)
+			.geometries)
+		.enter()
+			.append("path")
+			.attr("d", path)
+	});
+
+</script>
+</body>
+</html>
