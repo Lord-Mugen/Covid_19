@@ -581,7 +581,7 @@
 }  */
 
 
- @media (min-width: 360px) {
+/*  @media (min-width: 360px) {
     .header{
         left: -3.5rem;
         display: flex;
@@ -691,8 +691,8 @@
     }
     
 } 
-
-@media (min-width: 768px) {
+ */
+/* @media (min-width: 768px) {
 
     .header{
         left: -3.5rem;
@@ -836,7 +836,7 @@
         height: 32rem;
      }
 
-} 
+}  */
           
  /*FIN phone section styles */
 

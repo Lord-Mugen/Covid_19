@@ -319,3 +319,76 @@ function loadCountrisTable() {
 
 console.log("aver aver q paso")
 console.log(pagination.end_size)
+
+
+
+
+
+/* Top 10 Country wise Covid-19 Updates- Tiles */
+
+const cargarAPI = document.querySelector('#top10-country-wise');
+cargarAPI.addEventListener('DOMContentLoaded', conseguirDatos);
+
+function conseguirDatos() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado => mostrarHTML(resultado ));
+}
+
+function mostrarHTML(datos) {
+    const contenido = document.querySelector('.table-item');
+
+    let html = '';
+
+    datos.forEach( country => {
+        const { cases, todayCases, deaths, todayDeaths} = country;
+
+        html += `
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${todayCases}</div>
+        <div class="table-item  table-esthetic">${deaths}</div>
+        <div class="table-item  table-esthetic">${todayDeaths}</div>
+        `
+    })
+
+    contenido.innerHTML =html;
+}
+/* document.addEventListener('DOMContentLoaded', obtenerDatos)  
+
+
+
+const top10countrieswise = document.querySelector('#top10-country-wise')
+
+function obtenerDatos() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado => mostrarHTML(resultado))
+}
+
+
+function mostrarHTML(casos) {
+    const contenido = document.querySelector('.table-item');
+
+    let html = '';
+
+    casos.forEach(casos =>{
+        const { cases, todayCases, todayDeaths, active, recovered} = casos;
+        html += ` 
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        <div class="table-item  table-esthetic">${cases}</div>
+        `
+    })
+}
+ contenido.innerHTML = html;
+ */
+
