@@ -8,11 +8,6 @@ let Tracker3paginationul = document.getElementById('Tracker3-pagination-ul');
 let Tracker3tabledata = document.getElementById('Tracker3-table-data');
 let Tracker3filtervalue = document.getElementById('Tracker3-filter-value');
 let Tracker3TableCaption=document.getElementById('Tracker3-table-caption');
-let Tracker6cardsdata=document.getElementById('Tracker6-cards-data');
-let changeMenu=document.querySelectorAll('#changeMenu');
-let Headerbutton=document.querySelectorAll('#Header-button');
-let Tracker5tabsdata=document.querySelectorAll('#Tracker5-tabs-data');
-let Tracker5activeid=document.querySelectorAll('#Tracker5-active-id');
 
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -22,7 +17,6 @@ let day = date_now.getDate();
 let month = date_now.getMonth();
 let year = date_now.getFullYear();
 Datef.innerHTML = "update: " + months[month] + " " + day + "," + " " + year;
-
 
 fetch('https://disease.sh/v3/covid-19/all')
     .then(response => response.json())
@@ -60,7 +54,7 @@ fetch('https://disease.sh/v3/covid-19/all')
 
 
 let countries = funCountries();
-let countries3= funCountries();
+
 /*console.log(countries);*/
 
 async function funCountries() {
@@ -123,18 +117,11 @@ countries.then(list => {
 })
 
 /*Funcion para seleccionar pais por combobox*/
-let start=0;
-selectCountry();
 function selectCountry() {
-    let name_country;
-    if(start==0){
-            name_country="Afghanistan";
-            start++;
-    }else{
-        name_country = tracker2select.value;
-    }
-    
-    
+    /*
+        console.log(tracker2select);
+        console.log(tracker2select.value);*/
+    let name_country = tracker2select.value;
     let url = ('https://disease.sh/v3/covid-19/countries/' + name_country)
     fetch(url)
         .then(response => response.json())
@@ -600,85 +587,3 @@ function conseguirDatos6() {
         });
 }
 conseguirDatos6()
-/*Tracker 6*/
-
-countries3.then(list=>{
-    for(x of list){
-        Tracker6cardsdata.innerHTML+=
-        '<div class="Tracker6-container">'+
-            '<div class="Tracker6-card-title">'+
-                '<img src="'+x.countryInfo.flag+'" alt="">'+
-                '<h3>'+x.country+'</h3>'+
-            '</div>'+
-            '<div class="Tracker6-card-body">'+
-                '<div class="c-primary">'+
-                    '<p>Cases</p>'+
-                    '<span >'+x.cases+'</span>'+
-                '</div>'+
-                '<div class="c-danger">'+
-                    '<p>Death</p>'+
-                    '<span >'+x.deaths+'</span>'+
-                '</div>'+
-                '<div class="c-success">'+
-                    '<p>Recovered</p>'+
-                    '<span >'+x.recovered+'</span>'+
-                '</div>'+
-                '<div class="c-danger">'+
-                    '<p>Today Death</p>'+
-                    '<span >'+x.todayDeaths+'</span>'+
-                '</div>'+
-                '<div class="c-secundary">'+
-                    '<p>Today Cases</p>'+
-                    '<span >'+x.todayCases+'</span>'+
-                '</div>'+
-                '<div class="c-warning">'+
-                    '<p>Critical</p>'+
-                    '<span >'+x.critical+'</span>'+
-                '</div>'+
-                '<div class="c-info">'+
-                    '<p>Active Cases</p>'+
-                    '<span>'+x.active+'</span>'+
-                '</div>'+
-            '</div>'+
-        '</div>';
-    }
-    
-})
-
-/* Cambiar pestaña*/
-function changeView(numView){
-    for(x of changeMenu){
-        console.log(x);
-        x.classList="block-container activeMenu";
-    }
-    changeMenu[numView].className="block-container";
-    for(x of Headerbutton){
-        x.className=" ";
-    }
-    Headerbutton[numView].className="Header-nav-active";
-}
-
-
-/*TRacker 5*/
-TabsCountry('Argentina',0)
-function TabsCountry(name_country, numTab) {
-    
-    let url = ('https://disease.sh/v3/covid-19/countries/' + name_country)
-    fetch(url)
-        .then(response => response.json())
-        .then(json => {
-            /* console.log(json);*/
-            /**/
-            Tracker5tabsdata[0].innerHTML = json.cases;
-            Tracker5tabsdata[1].innerHTML = json.deaths;
-            Tracker5tabsdata[2].innerHTML = json.recovered;
-            Tracker5tabsdata[3].innerHTML = json.active;
-            Tracker5tabsdata[4].innerHTML = json.todayCases;
-            Tracker5tabsdata[5].innerHTML = json.todayDeaths;
-        })
-    for(x of Tracker5activeid){
-        x.classList=" ";
-    }
-    Tracker5activeid[numTab].className="Tracker5-active";
-}
-
