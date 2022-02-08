@@ -288,7 +288,7 @@
  /* MEDIQUERIES */
 
 
-  @media (max-width: 1024px) {
+/*    @media (min-width: 1024px) {
 
     .header{
         left: -3.5rem;
@@ -435,9 +435,10 @@
         width: 15.5rem;
         height: 32rem;
      }
-} 
+}  */ 
 
- @media (max-width: 768px){
+
+/*  @media (max-width: 768px){
 
     .header{
         left: -3.5rem;
@@ -577,9 +578,10 @@
         height: 25rem;
      }
 
-} 
+}  */
 
- @media (max-width: 360px) {
+
+/*  @media (min-width: 360px) {
     .header{
         left: -3.5rem;
         display: flex;
@@ -689,8 +691,152 @@
     }
     
 } 
+ */
+/* @media (min-width: 768px) {
 
+    .header{
+        left: -3.5rem;
+        display: flex;
+        justify-content:center;
+    }
+    .iconolog{
+        height:2rem;
+    }
+    .logonav{
+        display: flex;
+    }
+    .homelogo{
+        font-size: 0.8rem;
+        margin-right: -2rem;
+    }
+    .navbar ul{
+        font-size: 0.8rem;
+        margin-left: 2rem;
+        width: 768px;
+    }
+    .home{
+        display: grid;
+        height: 40rem repeat;
+        width: 50rem;
+        background-size: auto;
+        height: 107vh;
+        margin-bottom: 5rem;
+    }
+    .home_div1{
+        margin-left: 2rem;
+        margin-top: 5rem;
+        width: 768px;
+    }
+    .home_h1{
+        font-size: 2.4rem;
+        line-height: 50px;
+        margin-top: -1rem;
+        width: 768px;
+    }
+    .home_p{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        width: 25rem;
+        line-height: 30px;
+    }
+    .home_contador{
+        width: 350px;
+        height: 100px;
+        border-radius:0.2rem;
+        line-height: 1.5rem;
+        top: -1rem;
+        position: relative;
+    }
+    .colombia{
+        width: 90px;
+        height: 60px;
+        margin-top: -8px;
+    }
+    
+    .home_p2{
+        font-size: 1rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .home_img{
+        height: 350px;
+        width: 270px;
+        position: absolute;
+        top: -26rem;
+        left: 30rem;
+    }
+    
+    .Cellphone{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+    
+    
+    .phone_container{
+        display: grid;
+        grid-template-columns:repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+        height: 90%;
+        background: radial-gradient( darkblue,#20bdff);
+        grid-gap: 1rem;
+        width: 90vw;
+        border-radius: 1rem;
+    }
+    
+    .buttonphone{
+        display: grid;
+        height: 4rem;
+        width: 18rem;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 1rem 0.1rem;
+        font-size: 0.9rem;
+        border-radius: 0.25rem;
+        margin-top: 15rem;
+        margin-left: 3rem;
+        
+    }
+    
+    .phone_div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        padding-left: 5rem;
+    }
+    
+    .phone_h2{
+        font-size: 2rem;
+        width: 22rem;
+        margin-top: 6rem;
+    }
+    .phone_p{
+        font-size: 1rem;
+        width: 19rem;
+    }
+    
+    
+    .phone_figura{
+        position: relative;
+    }
+    
+    .phoneimage{
+        position: absolute;
+        top:-3rem;
+        left:50%;
+        transform: translate(-50%, 0); 
+        width: 15rem;
+        height: 32rem;
+     }
 
+}  */
           
  /*FIN phone section styles */
 
