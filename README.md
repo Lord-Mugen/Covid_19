@@ -3,14 +3,14 @@
 <p>
 Trabajaremos en crear una web que nos muestre los datos del Covid-19 a nuvel mundial. Con el prosposito de que las personas puedan estar bien informadas sobre la propagación de este virus.El Covid-19 es una realidad que afrontamos en este siglo, y a pesar de ser tan malo, gracias a la tecnología podemos luchar contra él creando estrategias, medidas de contención basándonos en datos que podemos recoger y mantener informado a cualquier usuario de la situación en cada país.
 </p>
-<img src="./images/tracker2.jpg" width="300"  height="300">
+<img src="./images/tracker2.jpg" width="500"  height="300">
 
 
 <h1>Utimas-adiciones</h1>
 
 <p>Cambios en la ultima versión:</p>
 <p>*Se añadieron animaciones en la seccion PREVENT del archivo index </p>
-<img src="./images/prevent.jpg" width="300"  height="300">
+<img src="./images/prevent.jpg" width="500"  height="300">
 <br>
 <br>
 <p>Correciones:</p><br>
@@ -27,11 +27,11 @@ Trabajaremos en crear una web que nos muestre los datos del Covid-19 a nuvel mun
 <p>*El proyecto DEBE utilizar la metodología Scrum.</p><br>
 <p>*Se DEBE utilizar Gitflow.</p><br>
 <p>*Se DEBE consumir la API de disease.sh para traer los datos.</p><br>
-<img src="./images/Captura de pantalla de 2022-02-07 23-06-41.png" width="300"  height="300">
+<img src="./images/Captura de pantalla de 2022-02-07 23-06-41.png" width="500"  height="300">
 <p>*La página DEBE ser responsive.</p><br>
-<img src="./images/Captura de pantalla de 2022-02-07 23-09-55.png" width="300"  height="300">
+<img src="./images/Captura de pantalla de 2022-02-07 23-09-55.png" width="500"  height="300">
 <p>*Se debe hacer una landing page que sea fiel a mockup.</p><br>
-<img src="./images/Captura de pantalla de 2022-02-07 23-11-55.png" width="300"  height="300">
+<img src="./images/Captura de pantalla de 2022-02-07 23-11-55.png" width="500"  height="300">
 <p>*El diseño DEBE ser fiel al mockup y utilizar las imágenes y los íconos que se dejaron en los recursos.</p><br>
 <p>*La página DEBE mostrar los datos que aparcen en los mockups:
 -Total de contagios.<br>
@@ -40,20 +40,20 @@ Trabajaremos en crear una web que nos muestre los datos del Covid-19 a nuvel mun
 -Total de casos activos.<br>
 -Nuevos casos.<br>
 -Nuevas muertes.<br></p><br>
-<img src="./images/Captura de pantalla de 2022-02-07 23-16-24.png" width="300"  height="300">
+<img src="./images/Captura de pantalla de 2022-02-07 23-16-24.png" width="500"  height="300">
 <p>*La página DEBE filtrar por países.</p><br>
 <p>*En la parte de la tabla se DEBE poder organizar en orden según cada item.</p><br>
 <p>*La página DEBE Permitir que el usuario decida qué numero de resultados quiere ver en la tabla.</p><br>
-<img src="./images/search.jpg"  width="300"  height="300">
+<img src="./images/search.jpg"  width="500"  height="300">
 <p>*La página debe permitir búsquedas por palabras clave.</p><br>
-<img src="./images/search.jpg"  width="300"  height="300">
+<img src="./images/search.jpg"  width="500"  height="300">
 <p>*La página DEBE mostrar en alguna parte la cantidad de vacunados en el mundo.</p><br>
 <p>*La página DEBE filtrar los vacunados por país.</p><br>
 <p>*El sitio debe ser interactivo y generar las animaciones que se muestran en el video<p><br>
 <p>*No se pueden utilizar frameworks ni librerías de Javascript excepto la especificada en las recomendaciones.</p><br>
 <p>*El repositorio DEBE tener un Readme muy específico, con capturas de pantalla y los pasos para la instalación de las librerías si las van a usar.
 <img src="./images/Captura de pantalla de 2022-02-07 23-22-19.png">
-<img src="./images/Captura de pantalla de 2022-02-07 23-30-21.png" width="300"  height="300">
+<img src="./images/Captura de pantalla de 2022-02-07 23-30-21.png" width="500"  height="300">
 </p><br>
 <h1>Requerimientos-de-software</h1>
 <p>Nos fue necesario utilizar metodos externos para poder visualizar archivos JSON</p><br>
