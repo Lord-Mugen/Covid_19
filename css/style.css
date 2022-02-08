@@ -699,11 +699,26 @@
 /*Seccion prevent*/
 
 .prevent{
+    position: relative;
     padding: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+   
+}
+
+.prevent::after{
+    position: absolute;
+    content: "*";
+    width: 100%;
+    height: 100%;
+    
+    background-color: #F0F0F0;
+    outline-color: #F0F0F0;
+    outline: #F0F0F0;
+    z-index: -1;
 }
 
 .prevent-title{
@@ -745,8 +760,10 @@
     height: 6em;
     width: 6em;
     text-align: center;
-    
+    transition: all 0.3s;
 }
+
+
 
 .prevent-hexagon{
     position: relative;
@@ -755,9 +772,23 @@
     justify-content: center;
     height: 5.4em;
     width: 9em;
-    background-color: gray;
+    background-color: white;
     border-radius: 0.4em;
+    transition: all 0.3s;
 }
+
+.prevent-hexagon img:hover{
+    width: 6.5rem;
+    height: 6.5rem;
+    transition: all 0.3s;
+}
+.prevent-hexagon:hover{
+    height: 5.8em;
+    width: 9.4em;
+    transition: all 0.3s;
+}
+
+
 
 .prevent-hexagon::before{
     position: absolute;
