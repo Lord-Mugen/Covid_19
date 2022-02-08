@@ -1,7 +1,7 @@
 # Covid_19
 
 <p>
-Trabajaremos en crear una web que nos muestre los datos del Covid-19 a nuvel mundial. Con el prosposito de que las personas puedan estar bien informadas sobre la propagación de este virus.El Covid-19 es una realidad que afrontamos en este siglo, y a pesar de ser tan malo, gracias a la tecnología podemos luchar contra él creando estrategias, medidas de contención basándonos en datos que podemos recoger y mantener informado a cualquier usuario de la situación en cada país.
+Trabajaremos en crear una web que nos muestre los datos del Covid-19 a nuvel mundial. Con el prosposito de que las personas puedan estar bien informadas sobre la propagación de este virus.El Covid-19 es una realidad que afrontamos en este siglo, y a pesar de ser tan malo, gracias a la tecnología podemos luchar contra él creando estrategias, medidas de contención basándonos en datos que podemos recoger y mantener informado a cualquier usuario de la situación en cada país.Este proyecto se realizó bajo la colaboración de Chrisitan Javier Ruiz Cortés, Carlos Eduardo Martinez y Diego Botello.
 </p>
 <img src="./images/tracker2.jpg" width="500"  height="300">
 
