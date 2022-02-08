@@ -327,17 +327,20 @@ console.log(pagination.end_size)
 /* Top 10 Country wise Covid-19 Updates- Tiles */
 
 const cargarAPI = document.querySelector('#tracker4-Top-Cases');
-/* cargarAPI.addEventListener('DOMContentLoaded', conseguirDatos); */
+
 
 let tracker4TopCases = document.getElementById('tracker4-Top-Cases');
 let tracker4TodayCases = document.getElementById('tracker4-Today-Cases');
-
+let tracker4TotalDeaths = document.getElementById('tracker4-Total-Deaths');
+let tracker4TodayDeaths = document.getElementById('tracker4-Today-Deaths');
+let tracker4TopActive = document.getElementById('tracker4-Top-Active');
+let tracker4Recovered = document.getElementById('tracker4-Recovered');
+/* TOTAL CASES */
 function conseguirDatos() {
     const url = 'https://disease.sh/v3/covid-19/countries';
     fetch(url)
         .then(respuesta => respuesta.json())
         .then(resultado =>{
-            /* total cases list */
             resultado.sort(function(a,b){return a.cases-b.cases});
             resultado.reverse();
             
@@ -364,8 +367,25 @@ function conseguirDatos() {
             }
 
 
-             /* Today cases list 
-             resultado.sort(function(a,b){return a.todayCases-b.todayCases});
+
+
+
+        });
+}
+conseguirDatos();
+
+
+
+
+
+/********************* TODAY CASES *****************************/
+function conseguirDatos2() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado =>{
+           
+            resultado.sort(function(a,b){return a.todayCases-b.todayCases});
             resultado.reverse();
             
             tracker4TodayCases.innerHTML = '<h5>Today Cases</h5>';
@@ -386,19 +406,184 @@ function conseguirDatos() {
                   if ( cont ==10){
                       break;
                   }
-                 
+                  /* cont++; */
+                /* cont = cont+1; */
             }
- */
+
 
 
 
 
         });
-
-        
-
-        
 }
+conseguirDatos2()
 
-conseguirDatos();
 
+
+/* *******************TOTAL DEATHS *************************/
+
+
+function conseguirDatos3() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado =>{
+           
+            resultado.sort(function(a,b){return a.deaths-b.deaths});
+            resultado.reverse();
+            
+            tracker4TotalDeaths.innerHTML = '<h5>Today Cases</h5>';
+            
+            let cont= 0;
+
+            for(items of resultado) {
+                tracker4TotalDeaths.innerHTML += 
+
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.deaths+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
+
+                  if ( cont ==10){
+                      break;
+                  }
+                  /* cont++; */
+                /* cont = cont+1; */
+            }
+
+
+
+
+
+        });
+}
+conseguirDatos3()
+
+/* ***************************TODAY DEATHS ***************************/
+
+
+function conseguirDatos4() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado =>{
+           
+            resultado.sort(function(a,b){return a.todayDeaths-b.todayDeaths});
+            resultado.reverse();
+            
+            tracker4TodayDeaths.innerHTML = '<h5>Today Deahts</h5>';
+            
+            let cont= 0;
+
+            for(items of resultado) {
+                tracker4TodayDeaths.innerHTML += 
+
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.todayDeaths+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
+
+                  if ( cont ==10){
+                      break;
+                  }
+                  /* cont++; */
+                /* cont = cont+1; */
+            }
+
+
+
+
+
+        });
+}
+conseguirDatos4()
+
+
+/********************************** TOP ACTIVE  *******************************/
+
+
+function conseguirDatos5() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado =>{
+           
+            resultado.sort(function(a,b){return a.active-b.active});
+            resultado.reverse();
+            
+            tracker4TopActive.innerHTML = '<h5>Top Active</h5>';
+            
+            let cont= 0;
+
+            for(items of resultado) {
+                tracker4TopActive.innerHTML += 
+
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.active+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
+
+                  if ( cont ==10){
+                      break;
+                  }
+                  /* cont++; */
+                /* cont = cont+1; */
+            }
+
+
+
+
+
+        });
+}
+conseguirDatos5()
+
+/********************************** RECOVERED  *******************************/
+
+function conseguirDatos6() {
+    const url = 'https://disease.sh/v3/covid-19/countries';
+    fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(resultado =>{
+           
+            resultado.sort(function(a,b){return a.recovered-b.recovered});
+            resultado.reverse();
+            
+            tracker4Recovered.innerHTML = '<h5>Recovered</h5>';
+            
+            let cont= 0;
+
+            for(items of resultado) {
+                tracker4Recovered.innerHTML += 
+
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.recovered+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
+
+                  if ( cont ==10){
+                      break;
+                  }
+                  /* cont++; */
+                /* cont = cont+1; */
+            }
+
+
+
+
+
+        });
+}
+conseguirDatos6()
