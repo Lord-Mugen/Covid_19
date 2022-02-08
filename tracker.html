@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./css/styleTracker.css">
     <link rel="stylesheet" href="./css/styleTracker3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/StyleTracker3.sass">
+    <link rel="stylesheet" href="./css/StyleTracker5.css">
+    <link rel="stylesheet" href="./css/StyleTracker6.css">
     <title>Document</title>
 </head>
 
@@ -24,14 +25,14 @@
             <nav class="Header-nav">
                 <ul>
                     <li class="Header-nav-logo"><img src="./images/coronavirus.png" alt="logo"></li>
-                    <li><a class="Header-nav-active" href=""><i class="ti-pie-chart"></i></a></li>
-                    <li><a href=""><i class="ti-view-list"></i></a></li>
-                    <li><a href=""><i class="ti-view-grid"></i></a></li>
-                    <li><a href=""><i class="ti-layout-tab"></i></a></li>
-                    <li><a href=""><i class="ti-layers-alt"></i></a></li>
-                    <li><a href=""><i class="ti-stats-up"></i></a></li>
-                    <li><a href=""><i class="ti-world"></i></a></li>
-                    <li><a href=""><i class="ti-comment"></i></a></li>
+                    <li><a id="Header-button" class="Header-nav-active" onclick="changeView(0)" href="#"><i class="ti-pie-chart"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(1)" href="#"><i class="ti-view-list"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(2)" href="#"><i class="ti-view-grid"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(3)" href="#"><i class="ti-layout-tab"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(4)" href="#"><i class="ti-layers-alt"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(5)" href="#"><i class="ti-stats-up"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(6)" href="#"><i class="ti-world"></i></a></li>
+                    <li><a id="Header-button" class="" onclick="changeView(7)" href="#"><i class="ti-comment"></i></a></li>
                 </ul>
             </nav>
         </header>
@@ -78,7 +79,7 @@
                 </ul>
             </div>
         </section>
-        <section id="changeMenu" class="block-container activeMenu">
+        <section id="changeMenu" class="block-container">
             <div class="Tracker2">
                 <div class="Tracker2-block1 container">
                     <div class="Tracker2-block1-s1 ">
@@ -97,7 +98,7 @@
                                 <img src="./images/icons/covid-defult.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>Total Cases</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-primary">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-primary">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +107,7 @@
                                 <img src="./images/icons/covid-red.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>Total Deaths</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-danger">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-danger">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +116,7 @@
                                 <img src="./images/icons/covid-green.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>Total Recovered</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-success">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-success">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +125,7 @@
                                 <img src="./images/icons/covid-blue.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>Total Active</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-info">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-info">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +134,7 @@
                                 <img src="./images/icons/covid-orange.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>New Cases</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-warning">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-warning">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +143,7 @@
                                 <img src="./images/icons/covid-redark.svg" alt="">
                                 <div class="Tracker2-info">
                                     <h6>New Deaths</h6>
-                                    <h3 id="Tracker2-imgcard-data" class="c-danger-dark">77026880</h3>
+                                    <h3 id="Tracker2-imgcard-data" class="c-danger-dark">0</h3>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +160,7 @@
                             <img src="./images/icons/covid-defult.svg" alt="">
                             <div class="Tracker2-block3-text c-primary-dark">
                                 <p>Total Confirmed</p>
-                                <h3 id="Tracker2-block3-data">77026880</h3>
+                                <h3 id="Tracker2-block3-data">0</h3>
                             </div>
                         </div>
                     </div>
@@ -168,7 +169,7 @@
                             <img src="./images/icons/covid-green.svg" alt="">
                             <div class="Tracker2-block3-text c-primary-dark">
                                 <p>Total Recovered</p>
-                                <h3 id="Tracker2-block3-data">77026880</h3>
+                                <h3 id="Tracker2-block3-data">0</h3>
                             </div>
                         </div>
                     </div>
@@ -177,7 +178,7 @@
                             <img src="./images/icons/covid-red.svg" alt="">
                             <div class="Tracker2-block3-text c-primary-dark">
                                 <p>Total Deaths</p>
-                                <h3 id="Tracker2-block3-data">77026880</h3>
+                                <h3 id="Tracker2-block3-data">0</h3>
                             </div>
                         </div>
                     </div>
@@ -186,14 +187,14 @@
                             <img src="./images/icons/covid-redark.svg" alt="">
                             <div class="Tracker2-block3-text c-primary-dark">
                                 <p>New Deaths</p>
-                                <h3 id="Tracker2-block3-data">77026880</h3>
+                                <h3 id="Tracker2-block3-data">0</h3>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="changeMenu" class="block-container2  ">
+        <section id="changeMenu" class="block-container activeMenu">
             <div class="Tracker3">
                 <div class="Tracker3-title">
                     <h3>Sin Ajax Data Table - Covid-19 Country Wise State</h3>
@@ -214,7 +215,7 @@
                         <input oninput="Search(value)" class="" value="" type="text" placeholder=" ingrese">
                     </div>
                 </div>
-                <div class="table-responsive Tracker3-table">
+                <div class="table-responsive Tracker3-table ">
                     <table class="table ">
                         <thead>
                             <tr id="TRacker3-table-tr">
@@ -222,31 +223,40 @@
                                     <a href="#">Flag</a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(1,'country')" href="#">Country<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(1,'country')" href="#">Country<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(2, 'cases')" href="#">Cases<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(2, 'cases')" href="#">Cases<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(3, 'todayCases')" href="#">New Cases<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(3, 'todayCases')" href="#">New Cases<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(4, 'deaths')" href="#">Deaths<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(4, 'deaths')" href="#">Deaths<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(5, 'todayDeaths')" href="#">New Deaths<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(5, 'todayDeaths')" href="#">New Deaths<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(6, 'recovered')" href="#">Recoverd<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(6, 'recovered')" href="#">Recoverd<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(7, 'active')" href="#">Active<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(7, 'active')" href="#">Active<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(8, 'critical')" href="#">Critical<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(8, 'critical')" href="#">Critical<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                                 <th>
-                                    <a onclick="orderColumn(9, 'tests')" href="#">Tested<i class="bi bi-arrow-down-up"></i></a>
+                                    <a onclick="orderColumn(9, 'tests')" href="#">Tested<i
+                                            class="bi bi-arrow-down-up"></i></a>
                                 </th>
                             </tr>
                         </thead>
@@ -254,7 +264,7 @@
                             <!--Aqui van los  calores de la tablas llenado con js-->
                         </tbody>
                         <caption>
-                             <span id="Tracker3-table-caption"></span> 
+                            <span id="Tracker3-table-caption"></span>
                         </caption>
                     </table>
                 </div>
@@ -272,8 +282,134 @@
                 </div>
             </div>
         </section>
-        <section id="changeMenu" class="block-container3 activeMenu">
-
+        <section id="changeMenu" class="block-container activeMenu">
+        </section>
+        <section id="changeMenu" class="block-container activeMenu">
+            <div class="Tracker5">
+                <div class="Tracker5-title">
+                    <h3>Covid-19 Country Wise - Tabs South America</h3>
+                </div>
+                <div class="Tracker5-tabs">
+                    <div id="Tracker5-active-id" class="Tracker5-active">
+                        <img src="https://disease.sh/assets/img/flags/ar.png" alt="">
+                        <a onclick="TabsCountry('Argentina',0)" href="#">Argentina</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/bo.png" alt="">
+                        <a onclick="TabsCountry('Bolivia',1)" href="#">Bolivia</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/br.png" alt="">
+                        <a onclick="TabsCountry('Brazil',2)" href="#">Brazil</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/cl.png" alt="">
+                        <a onclick="TabsCountry('Chile',3)" href="#">Chile</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/co.png" alt="">
+                        <a onclick="TabsCountry('Colombia',4)" href="#">Colombia</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/ec.png" alt="">
+                        <a onclick="TabsCountry('Ecuador',5)" href="#">Ecuador</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/fk.png" alt="">
+                        <a onclick="TabsCountry('Malvinas',6)" href="#">Malvinas"</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/gf.png" alt="">
+                        <a onclick="TabsCountry('French Guiana',7)" href="#">French Guiana</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/gy.png" alt="">
+                        <a onclick="TabsCountry('Guyana',8)" href="#">Guyana</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/py.png" alt="">
+                        <a onclick="TabsCountry('Paraguay',9)" href="#">Paraguay</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/pe.png" alt="">
+                        <a onclick="TabsCountry('Peru',10)" href="#">Peru</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/sr.png" alt="">
+                        <a onclick="TabsCountry('Suriname',11)" href="#">Suriname</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/uy.png" alt="">
+                        <a onclick="TabsCountry('Uruguay',12)" href="#">Uruguay</a>
+                    </div>
+                    <div id="Tracker5-active-id" class="">
+                        <img src="https://disease.sh/assets/img/flags/ve.png" alt="">
+                        <a onclick="TabsCountry('Venezuela',13)" href="#">Venezuela</a>
+                    </div>
+                </div>
+                <div class="Tracker5-cards">
+                    <div class="">
+                        <div class="Tracker2-imgcard-1 T-imgcard">
+                            <img src="./images/icons/covid-defult.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>Total Cases</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-primary">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Tracker2-imgcard-2 T-imgcard">
+                            <img src="./images/icons/covid-red.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>Total Deaths</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-danger">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Tracker2-imgcard-3 T-imgcard">
+                            <img src="./images/icons/covid-green.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>Total Recovered</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-success">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Tracker2-imgcard-4 T-imgcard">
+                            <img src="./images/icons/covid-blue.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>Total Active</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-info">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Tracker2-imgcard-5 T-imgcard">
+                            <img src="./images/icons/covid-orange.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>New Cases</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-warning">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="Tracker2-imgcard-6 T-imgcard">
+                            <img src="./images/icons/covid-redark.svg" alt="">
+                            <div class="Tracker2-info">
+                                <h6>New Deaths</h6>
+                                <h3 id="Tracker5-tabs-data" class="c-danger-dark">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="changeMenu" class="block-container activeMenu">
+            <div id="Tracker6-cards-data" class="Tracker6">
+                
+                <!--Datos llenado por js-->
+            </div>
         </section>
     </main>
     <script src="./js/scriptTracker.js"></script>

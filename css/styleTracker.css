@@ -27,7 +27,7 @@
     --green-light:#edffec;
     --gray-light:#999;
     --danger-dark:#b70202;
-    
+    --background: #F7F8FC;
 }
 
 *{
@@ -95,6 +95,10 @@
 }
 .c-primary{
     color: var(--primary);
+}
+
+.c-secundary{
+    color:var(--secondary);
 }
 .c-primary-dark{
     color: var(--blue-dark);
@@ -353,6 +357,8 @@
 .block-container{
     width: 100%;
     display: grid;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .Tracker2{

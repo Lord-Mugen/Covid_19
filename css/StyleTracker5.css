@@ -1,0 +1,65 @@
+
+.Tracker5{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+
+.Tracker5 >div{
+    
+}
+
+.Tracker5-title h3 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--transparent);
+}
+
+.Tracker5-cards{
+    padding-top:1rem;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%,12rem), 1fr));
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.Tracker5-tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Tracker5-tabs >div{
+    display: flex;
+    background-color: var(--white);
+    padding: 0.8rem;
+    border-radius: 5px;
+    gap: 1rem;
+}
+
+.Tracker5-tabs img{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+}
+
+.Tracker5-tabs a{
+    text-decoration: none;
+    color: black;
+}
+.Tracker5-tabs >div:hover{
+    background-color: #3639AE;
+    
+}
+
+.Tracker5-tabs >div:hover a{
+    color: var(--white) ;
+}
+
+.Tracker5-active{
+    background-color: #3639AE !important;
+}
+
+.Tracker5-active a{
+    color: var(--white) ;
+}

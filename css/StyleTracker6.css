@@ -1,0 +1,55 @@
+
+.Tracker6{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+.Tracker6-card-body{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%,6rem), 1fr));
+    padding: 0.5rem 1rem;
+}
+
+.Tracker6-card-title{
+    display: flex;
+    border-bottom: 1px solid var(--transparent);
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Tracker6-card-title h3{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.Tracker6 img{
+    width: 2.8rem;
+    border-radius: 5px;
+}
+
+.Tracker6 p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.Tracker6 span{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.Tracker6-container{
+    margin: 1rem 1rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.089);
+    
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .Tracker6{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+    }
+}

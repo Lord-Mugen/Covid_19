@@ -1,30 +1,15 @@
-:root {
-    --gray-light: #999;
-    --background: #F7F8FC;
-    --white: white;
-    --blue-dark:#1a1662;
-}
-
-* {
-    /* outline: solid;*/
-}
 
 .Main {
     background-color: var(--background);
 }
 
-.block-container2 {
-    width: 100%;
-    display: grid;
-    height: 100vh;
-    overflow-y: auto;
-}
+
 
 .Tracker3 {
     display: flex;
     flex-direction: column;
     /* width: 100%;*/
-    padding: 1rem;
+    padding: 1rem 2rem;
     gap: 1rem;
 }
 
