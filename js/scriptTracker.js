@@ -326,69 +326,79 @@ console.log(pagination.end_size)
 
 /* Top 10 Country wise Covid-19 Updates- Tiles */
 
-const cargarAPI = document.querySelector('#top10-country-wise');
-cargarAPI.addEventListener('DOMContentLoaded', conseguirDatos);
+const cargarAPI = document.querySelector('#tracker4-Top-Cases');
+/* cargarAPI.addEventListener('DOMContentLoaded', conseguirDatos); */
+
+let tracker4TopCases = document.getElementById('tracker4-Top-Cases');
+let tracker4TodayCases = document.getElementById('tracker4-Today-Cases');
 
 function conseguirDatos() {
     const url = 'https://disease.sh/v3/covid-19/countries';
     fetch(url)
         .then(respuesta => respuesta.json())
-        .then(resultado => mostrarHTML(resultado ));
-}
+        .then(resultado =>{
+            /* total cases list */
+            resultado.sort(function(a,b){return a.cases-b.cases});
+            resultado.reverse();
+            
+            tracker4TopCases.innerHTML = '<h5>Top Cases</h5>';
+            
+            let cont= 0;
 
-function mostrarHTML(datos) {
-    const contenido = document.querySelector('.table-item');
+            for(items of resultado) {
+                   tracker4TopCases.innerHTML += 
 
-    let html = '';
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.cases+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
 
-    datos.forEach( country => {
-        const { cases, todayCases, deaths, todayDeaths} = country;
-
-        html += `
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${todayCases}</div>
-        <div class="table-item  table-esthetic">${deaths}</div>
-        <div class="table-item  table-esthetic">${todayDeaths}</div>
-        `
-    })
-
-    contenido.innerHTML =html;
-}
-/* document.addEventListener('DOMContentLoaded', obtenerDatos)  
-
-
-
-const top10countrieswise = document.querySelector('#top10-country-wise')
-
-function obtenerDatos() {
-    const url = 'https://disease.sh/v3/covid-19/countries';
-
-    fetch(url)
-        .then(respuesta => respuesta.json())
-        .then(resultado => mostrarHTML(resultado))
-}
+                  if ( cont ==10){
+                      break;
+                  }
+                  /* cont++; */
+                /* cont = cont+1; */
+            }
 
 
-function mostrarHTML(casos) {
-    const contenido = document.querySelector('.table-item');
+             /* Today cases list 
+             resultado.sort(function(a,b){return a.todayCases-b.todayCases});
+            resultado.reverse();
+            
+            tracker4TodayCases.innerHTML = '<h5>Today Cases</h5>';
+            
+            let cont= 0;
 
-    let html = '';
+            for(items of resultado) {
+                tracker4TodayCases.innerHTML += 
 
-    casos.forEach(casos =>{
-        const { cases, todayCases, todayDeaths, active, recovered} = casos;
-        html += ` 
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        <div class="table-item  table-esthetic">${cases}</div>
-        `
-    })
-}
- contenido.innerHTML = html;
+                '   <div class="table-item">'+
+                       '<img src="'+items.countryInfo.flag+'" width="30">'+
+                      ' <span>'+items.country+'</span>'+
+                       '<span>'+ items.todayCases+'</span>'+
+                  ' </div> ';
+                
+                  cont+=1;
+
+                  if ( cont ==10){
+                      break;
+                  }
+                 
+            }
  */
+
+
+
+
+        });
+
+        
+
+        
+}
+
+conseguirDatos();
 
